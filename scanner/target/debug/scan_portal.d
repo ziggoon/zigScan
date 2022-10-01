@@ -1,0 +1,1 @@
+/Users/zig/secdaemons/scan_portal/target/debug/scan_portal: /Users/zig/secdaemons/scan_portal/src/main.rs /Users/zig/secdaemons/scan_portal/src/util/cli.rs /Users/zig/secdaemons/scan_portal/src/util/lib.rs /Users/zig/secdaemons/scan_portal/src/util/mod.rs
