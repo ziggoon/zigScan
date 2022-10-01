@@ -1,5 +1,5 @@
 # scanner ignores
-/target
+/scanner/target
 .DS_Store
 init.*
 secondary.*

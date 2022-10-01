@@ -1,1 +1,0 @@
-/Users/zig/secdaemons/scan_portal/target/x86_64-pc-windows-gnu/debug/scan_portal.exe: /Users/zig/secdaemons/scan_portal/src/main.rs /Users/zig/secdaemons/scan_portal/src/util/cli.rs /Users/zig/secdaemons/scan_portal/src/util/lib.rs /Users/zig/secdaemons/scan_portal/src/util/mod.rs
