@@ -1,21 +1,3 @@
-# WebMap
-# -
-# https://github.com/SabyasachiRana/WebMap
-# Author: SabyasachiRana
-# -
-# Usage:
-#   $ cd /opt
-#   $ git clone https://github.com/SabyasachiRana/WebMap.git
-#   $ cd WebMap/docker
-#   $ docker build -t webmap:latest .
-#   $ docker run -d -v /opt/WebMap/docker/xml:/opt/xml -p 8000:8000 webmap:latest
-#
-# Nmap Example:
-#   $ nmap -sT -A -oX /tmp/myscan.xml 192.168.1.0/24
-#   $ mv /tmp/myscan.xml /opt/WebMap/docker/xml
-#
-# Now you can point your browser to http://localhost:8000
-
 FROM ubuntu:latest
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -29,8 +11,8 @@ RUN mkdir /opt/xml && mkdir /opt/notes && \
 
 RUN pip3 install Django requests xmltodict && \
     cd /opt/ && django-admin startproject nmapdashboard && cd /opt/nmapdashboard && \
-    git clone https://github.com/ziggoon/WebMap.git nmapreport && \
-    cd nmapreport && git checkout master
+    git clone https://github.com/ziggoon/zigScan && \
+    mv zigScan/webmap nmapreport
 
 RUN mkdir /var/run/vsftpd && mkdir /var/run/vsftpd/empty && \
     cp /opt/nmapdashboard/nmapreport/vsftpd.conf /etc/vsftpd.conf
