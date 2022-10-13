@@ -29,16 +29,16 @@ fn scan(ip: Vec<String>) {
     let ip = ip[1].as_str();
     println!("[!] STARTING SCANS FOR: {:?}", ip);
     util::lib::basic_scan(&ip);
-    util::lib::secondary_scan(&ip);
+    //util::lib::secondary_scan(&ip);
 }
 
 pub fn main_loop() {
     util::lib::banner();
-    description(); 
+    description();
     // initialize user_input to a mutable String
     let mut user_input: Vec<String>;
     let mut rl = Editor::<()>::new();
-    
+
     loop {
         let readline = rl.readline("GroupScan(): ");
         match readline {
@@ -50,18 +50,18 @@ pub fn main_loop() {
                     "quit" => std::process::exit(0),
                     _ => continue,
                 }
-            },
+            }
             Err(ReadlineError::Interrupted) => {
                 println!("ctrl+c pressed. quitting now..");
-                break
-            },
+                break;
+            }
             Err(ReadlineError::Eof) => {
                 println!("ctrl+d pressed. quitting now..");
-                break
-            },
+                break;
+            }
             Err(err) => {
                 println!("error: {:?}", err);
-                break
+                break;
             }
         }
     }
