@@ -23,7 +23,6 @@ RUN useradd user && echo "user:pass" | chpasswd && \
 
 RUN cp /opt/nmapdashboard/nmapreport/docker/settings.py /opt/nmapdashboard/nmapdashboard/
 RUN cp /opt/nmapdashboard/nmapreport/docker/urls.py /opt/nmapdashboard/nmapdashboard/
-RUN cp /opt/nmapdashboard/nmapreport/docker/tzdata.sh /root/tzdata.sh
 RUN cp /opt/nmapdashboard/nmapreport/docker/startup.sh /startup.sh
 
 RUN cd /opt/nmapdashboard && python3 manage.py migrate

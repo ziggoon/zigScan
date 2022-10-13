@@ -20,13 +20,13 @@ pub fn banner() {
 pub fn basic_scan(target: &str) {
     println!("[+] starting initial rustscan...");
     let scan_child = Command::new("rustscan")
-        .args(["-a", target, "--", "-oX", "init.xml"])
+        .args(["-a", target, "--", "-oX", "scans/init.xml"])
         .stdout(Stdio::piped())
         .spawn()
         .expect("initial nmap scan failed");
 
     let _output = scan_child.wait_with_output().expect("scan is fucked");
-    post_ftp("init.xml");
+    post_ftp("scans/init.xml");
 }
 
 pub fn secondary_scan(target: &str) {
@@ -40,14 +40,14 @@ pub fn secondary_scan(target: &str) {
             "-A",
             "-T4",
             "-oX",
-            "secondary.xml",
+            "scans/secondary.xml",
         ])
         .stdout(Stdio::piped())
         .spawn()
         .expect("secondary nmap scan failed");
 
     let _output = scan_child.wait_with_output().expect("scan is fucked");
-    post_ftp("secondary.xml");
+    post_ftp("scans/secondary.xml");
 }
 
 pub fn post_ftp(filename: &str) {
