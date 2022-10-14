@@ -9,3 +9,4 @@ author = "ziggoon"
 [dependencies]
 ftp = "3.0.1"
 rustyline = "7.1.0"
+colored = "2.0.0"

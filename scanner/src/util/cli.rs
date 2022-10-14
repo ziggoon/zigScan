@@ -5,9 +5,10 @@ use rustyline::Editor;
 
 fn description() {
     let desc = r#"
-    [+]     welcome to GroupScan
-    [+] @secdaemons nmap visualization tool
-    [+]       built by @ziggoon
+                [+]     welcome to zigScan
+                [+]   nmap visualization tool 
+                [+]     built by @ziggoon
+                [+]      cc @secdaemons
 "#;
     println!("{}", desc);
 }
@@ -28,8 +29,10 @@ fn main_help() {
 fn scan(ip: Vec<String>) {
     let ip = ip[1].as_str();
     println!("[!] STARTING SCANS FOR: {:?}", ip);
-    util::lib::basic_scan(&ip);
-    //util::lib::secondary_scan(&ip);
+    util::lib::basic_tcp(&ip);
+    util::lib::full_tcp(&ip);
+    util::lib::intense_scan(&ip);
+    util::lib::basic_udp(&ip);
 }
 
 pub fn main_loop() {
@@ -40,7 +43,7 @@ pub fn main_loop() {
     let mut rl = Editor::<()>::new();
 
     loop {
-        let readline = rl.readline("GroupScan(): ");
+        let readline = rl.readline("zigScan(): ");
         match readline {
             Ok(line) => {
                 user_input = get_string_vec(line);

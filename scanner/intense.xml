@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Thu Oct 13 22:55:46 2022 as: nmap -vvv -p 21,6463,8000,42000,42001,42002,42005,42003,42004,42006,42007,42008,42009,42010,42011,42012,42013,42014,42015,42016,42017,42018,42019,42020 -sS -sV -A -T4 -oX intense.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 21,6463,8000,42000,42001,42002,42005,42003,42004,42006,42007,42008,42009,42010,42011,42012,42013,42014,42015,42016,42017,42018,42019,42020 -sS -sV -A -T4 -oX intense.xml 127.0.0.1" start="1665719746" startstr="Thu Oct 13 22:55:46 2022" version="7.93" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="24" services="21,6463,8000,42000-42020"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1665719747"/>
+<taskend task="NSE" time="1665719747"/>
+<taskbegin task="NSE" time="1665719747"/>
+<taskend task="NSE" time="1665719747"/>
+<taskbegin task="NSE" time="1665719747"/>
+<taskend task="NSE" time="1665719747"/>
+<taskbegin task="SYN Stealth Scan" time="1665719747"/>
+<taskend task="SYN Stealth Scan" time="1665719747" extrainfo="24 total ports"/>
+<taskbegin task="Service scan" time="1665719747"/>
+<taskend task="Service scan" time="1665719838" extrainfo="24 services on 1 host"/>
+<taskbegin task="NSE" time="1665719842"/>
+<taskend task="NSE" time="1665719847"/>
+<taskbegin task="NSE" time="1665719847"/>
+<taskend task="NSE" time="1665719848"/>
+<taskbegin task="NSE" time="1665719848"/>
+<taskend task="NSE" time="1665719848"/>
+<host starttime="1665719747" endtime="1665719848"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="localhost" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ftp" product="vsftpd" version="2.0.8 or later" hostname="secdaemons" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd</cpe></service></port>
+<port protocol="tcp" portid="6463"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="unknown" servicefp="SF-Port6463-TCP:V=7.93%I=7%D=10/13%Time=6348DDCE%P=x86_64-apple-darwin21.5.0%r(GetRequest,A6,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x2032\r\nContent-Type:\x20application/json\r\nDate:\x20Fri,\x2014\x20Oct\x202022\x2003:55:58\x20GMT\r\nConnection:\x20close\r\n\r\n{\&quot;code\&quot;:0,\&quot;message\&quot;:\&quot;Not\x20Found\&quot;}&quot;)%r(HTTPOptions,A6,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x2032\r\nContent-Type:\x20application/json\r\nDate:\x20Fri,\x2014\x20Oct\x202022\x2003:55:58\x20GMT\r\nConnection:\x20close\r\n\r\n{\&quot;code\&quot;:0,\&quot;message\&quot;:\&quot;Not\x20Found\&quot;}&quot;)%r(RTSPRequest,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(RPCCheck,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(DNSVersionBindReqTCP,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(DNSStatusRequestTCP,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(Help,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(SSLSessionReq,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(TerminalServerCookie,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(TLSSessionReq,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(Kerberos,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(SMBProgNeg,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(X11Probe,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(FourOhFourRequest,A6,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x2032\r\nContent-Type:\x20application/json\r\nDate:\x20Fri,\x2014\x20Oct\x202022\x2003:55:58\x20GMT\r\nConnection:\x20close\r\n\r\n{\&quot;code\&quot;:0,\&quot;message\&quot;:\&quot;Not\x20Found\&quot;}&quot;)%r(LPDString,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(LDAPSearchReq,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(LDAPBindReq,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(SIPOptions,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, LDAPBindReq, LDAPSearchReq, LPDString, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close&#xa;  FourOhFourRequest, GetRequest, HTTPOptions: &#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Length: 32&#xa;    Content-Type: application/json&#xa;    Date: Fri, 14 Oct 2022 03:55:58 GMT&#xa;    Connection: close&#xa;    {&quot;code&quot;:0,&quot;message&quot;:&quot;Not Found&quot;}"><elem key="DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, LDAPBindReq, LDAPSearchReq, LPDString, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close</elem>
+<elem key="FourOhFourRequest, GetRequest, HTTPOptions">&#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Length: 32&#xa;    Content-Type: application/json&#xa;    Date: Fri, 14 Oct 2022 03:55:58 GMT&#xa;    Connection: close&#xa;    {&quot;code&quot;:0,&quot;message&quot;:&quot;Not Found&quot;}</elem>
+</script></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http-alt" product="WSGIServer/0.2 CPython/3.10.6" servicefp="SF-Port8000-TCP:V=7.93%I=7%D=10/13%Time=6348DDC9%P=x86_64-apple-darwin21.5.0%r(GetRequest,1A28,&quot;HTTP/1\.1\x20200\x20OK\r\nDate:\x20Fri,\x2014\x20Oct\x202022\x2003:55:53\x20GMT\r\nServer:\x20WSGIServer/0\.2\x20CPython/3\.10\.6\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nX-Frame-Options:\x20DENY\r\nVary:\x20Cookie\r\nContent-Length:\x206262\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20same-origin\r\nCross-Origin-Opener-Policy:\x20same-origin\r\nSet-Cookie:\x20\x20csrftoken=ZMTyyS6VOiDaFFI3T5Or1fynZJju6Iuf;\x20expires=Fri,\x2013\x20Oct\x202023\x2003:55:53\x20GMT;\x20Max-Age=31449600;\x20Path=/;\x20SameSite=Lax\r\n\r\n\n&lt;!DOCTYPE\x20html&gt;\n&lt;html&gt;\n&lt;head&gt;\n\t&lt;title&gt;GroupScan\x20@secdaemons&lt;/title&gt;\n\t&lt;link\x20href=\&quot;https://fonts\.googleapis\.com/icon\?family=Material\+Icons\&quot;\x20rel=\&quot;stylesheet\&quot;&gt;\n\t&lt;link\x20rel=\&quot;stylesheet\&quot;\x20href=\&quot;https://use\.fontawesome\.com/releases/v5\.4\.2/css/all\.css\&quot;\x20integrity=\&quot;sha384-/rXc/GQVaYpyDdyxK\+ecHPVYJSN9bmVFBvjA/9eOB\+pb3F2w2N6fc5qB9Ew5yIns\&quot;\x20crossorigin=\&quot;anonymous\&quot;&gt;\n\t&lt;link\x20rel=\&quot;stylesheet\&quot;\x20href=\&quot;https://cdnjs\.cloudflare\.com/ajax/libs/materialize/1\.0\.0/css/materialize\.min\.css\&quot;\x20m&quot;)%r(FourOhFourRequest,1B0A,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Fri,\x2014\x20Oct\x202022\x2003:55:58\x20GMT\r\nServer:\x20WSGIServer/0\.2\x20CPython/3\.10\.6\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nX-Frame-Options:\x20DENY\r\nContent-Length:\x206631\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20same-origin\r\nCross-Origin-Opener-Policy:\x20same-origin\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n&lt;head&gt;\n\x20\x20&lt;meta\x20http-equiv=\&quot;content-type\&quot;\x20content=\&quot;text/html;\x20charset=utf-8\&quot;&gt;\n\x20\x20&lt;title&gt;Page\x20not\x20found\x20at\x20/nice\x20ports,/Trinity\.txt\.bak&lt;/title&gt;\n\x20\x20&lt;meta\x20name=\&quot;robots\&quot;\x20content=\&quot;NONE,NOARCHIVE\&quot;&gt;\n\x20\x20&lt;style\x20type=\&quot;text/css\&quot;&gt;\n\x20\x20\x20\x20html\x20\*\x20{\x20padding:0;\x20margin:0;\x20}\n\x20\x20\x20\x20body\x20\*\x20{\x20padding:10px\x2020px;\x20}\n\x20\x20\x20\x20body\x20\*\x20\*\x20{\x20padding:0;\x20}\n\x20\x20\x20\x20body\x20{\x20font:small\x20sans-serif;\x20background:#eee;\x20color:#000;\x20}\n\x20\x20\x20\x20body&gt;div\x20{\x20border-bottom:1px\x20solid\x20#ddd;\x20}\n\x20\x20\x20\x20h1\x20{\x20font-weight:normal;\x20margin-bottom:\.4em;\x20}\n\x20\x20\x20\x20h1\x20span\x20{\x20font-size:60%;\x20color:#666;\x20font-weight:normal;\x20}\n\x20\x20\x20\x20table\x20{\x20border:none;\x20border-colla&quot;);" method="probed" conf="10"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-title" output="GroupScan @secdaemons"><elem key="title">GroupScan @secdaemons</elem>
+</script><script id="http-server-header" output="WSGIServer/0.2 CPython/3.10.6"><elem>WSGIServer/0.2 CPython/3.10.6</elem>
+</script><script id="http-favicon" output="Unknown favicon MD5: 4E8B532CD8EF6605838747FA5519B738"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Date: Fri, 14 Oct 2022 03:55:58 GMT&#xa;    Server: WSGIServer/0.2 CPython/3.10.6&#xa;    Content-Type: text/html; charset=utf-8&#xa;    X-Frame-Options: DENY&#xa;    Content-Length: 6631&#xa;    X-Content-Type-Options: nosniff&#xa;    Referrer-Policy: same-origin&#xa;    Cross-Origin-Opener-Policy: same-origin&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&#xa;    &lt;title&gt;Page not found at /nice ports,/Trinity.txt.bak&lt;/title&gt;&#xa;    &lt;meta name=&quot;robots&quot; content=&quot;NONE,NOARCHIVE&quot;&gt;&#xa;    &lt;style type=&quot;text/css&quot;&gt;&#xa;    html * { padding:0; margin:0; }&#xa;    body * { padding:10px 20px; }&#xa;    body * * { padding:0; }&#xa;    body { font:small sans-serif; background:#eee; color:#000; }&#xa;    body&gt;div { border-bottom:1px solid #ddd; }&#xa;    font-weight:normal; margin-bottom:.4em; }&#xa;    span { font-size:60%; color:#666; font-weight:normal; }&#xa;    table { border:none; border-colla&#xa;  GetRequest: &#xa;    HTTP/1.1 200 OK&#xa;    Date: Fri, 14 Oct 2022 03:55:53 GMT&#xa;    Server: WSGIServer/0.2 CPython/3.10.6&#xa;    Content-Type: text/html; charset=utf-8&#xa;    X-Frame-Options: DENY&#xa;    Vary: Cookie&#xa;    Content-Length: 6262&#xa;    X-Content-Type-Options: nosniff&#xa;    Referrer-Policy: same-origin&#xa;    Cross-Origin-Opener-Policy: same-origin&#xa;    Set-Cookie: csrftoken=ZMTyyS6VOiDaFFI3T5Or1fynZJju6Iuf; expires=Fri, 13 Oct 2023 03:55:53 GMT; Max-Age=31449600; Path=/; SameSite=Lax&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;GroupScan @secdaemons&lt;/title&gt;&#xa;    &lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot; rel=&quot;stylesheet&quot;&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.4.2/css/all.css&quot; integrity=&quot;sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns&quot; crossorigin=&quot;anonymous&quot;&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css&quot; m"><elem key="FourOhFourRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Date: Fri, 14 Oct 2022 03:55:58 GMT&#xa;    Server: WSGIServer/0.2 CPython/3.10.6&#xa;    Content-Type: text/html; charset=utf-8&#xa;    X-Frame-Options: DENY&#xa;    Content-Length: 6631&#xa;    X-Content-Type-Options: nosniff&#xa;    Referrer-Policy: same-origin&#xa;    Cross-Origin-Opener-Policy: same-origin&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&#xa;    &lt;title&gt;Page not found at /nice ports,/Trinity.txt.bak&lt;/title&gt;&#xa;    &lt;meta name=&quot;robots&quot; content=&quot;NONE,NOARCHIVE&quot;&gt;&#xa;    &lt;style type=&quot;text/css&quot;&gt;&#xa;    html * { padding:0; margin:0; }&#xa;    body * { padding:10px 20px; }&#xa;    body * * { padding:0; }&#xa;    body { font:small sans-serif; background:#eee; color:#000; }&#xa;    body&gt;div { border-bottom:1px solid #ddd; }&#xa;    font-weight:normal; margin-bottom:.4em; }&#xa;    span { font-size:60%; color:#666; font-weight:normal; }&#xa;    table { border:none; border-colla</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.1 200 OK&#xa;    Date: Fri, 14 Oct 2022 03:55:53 GMT&#xa;    Server: WSGIServer/0.2 CPython/3.10.6&#xa;    Content-Type: text/html; charset=utf-8&#xa;    X-Frame-Options: DENY&#xa;    Vary: Cookie&#xa;    Content-Length: 6262&#xa;    X-Content-Type-Options: nosniff&#xa;    Referrer-Policy: same-origin&#xa;    Cross-Origin-Opener-Policy: same-origin&#xa;    Set-Cookie: csrftoken=ZMTyyS6VOiDaFFI3T5Or1fynZJju6Iuf; expires=Fri, 13 Oct 2023 03:55:53 GMT; Max-Age=31449600; Path=/; SameSite=Lax&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;GroupScan @secdaemons&lt;/title&gt;&#xa;    &lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot; rel=&quot;stylesheet&quot;&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.4.2/css/all.css&quot; integrity=&quot;sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns&quot; crossorigin=&quot;anonymous&quot;&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css&quot; m</elem>
+</script></port>
+<port protocol="tcp" portid="42000"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42001"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42002"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42003"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42004"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42005"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42006"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42007"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42008"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42009"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42010"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42011"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42012"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42013"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42014"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42015"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42016"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42017"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42018"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42019"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42020"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="udp" portid="32679"/>
+<osmatch name="Apple macOS 10.14 (Mojave) (Darwin 18.2.0 - 18.6.0)" accuracy="96" line="7183">
+<osclass type="general purpose" vendor="Apple" osfamily="macOS" osgen="10.14.X" accuracy="96"><cpe>cpe:/o:apple:mac_os_x:10.14</cpe></osclass>
+</osmatch>
+<osmatch name="Apple Mac OS X 10.5 (Leopard) - 10.6.7 (Snow Leopard) (Darwin 9.0.0 - 10.7.0)" accuracy="90" line="5701">
+<osclass type="general purpose" vendor="Apple" osfamily="Mac OS X" osgen="10.5.X" accuracy="90"><cpe>cpe:/o:apple:mac_os_x:10.5</cpe></osclass>
+<osclass type="general purpose" vendor="Apple" osfamily="Mac OS X" osgen="10.6.X" accuracy="90"><cpe>cpe:/o:apple:mac_os_x:10.6</cpe></osclass>
+</osmatch>
+<osmatch name="Apple Mac OS X 10.7.0 - 10.7.4 (Lion) (Darwin 11.0.0 - 11.3.0)" accuracy="90" line="6549">
+<osclass type="general purpose" vendor="Apple" osfamily="Mac OS X" osgen="10.7.X" accuracy="90"><cpe>cpe:/o:apple:mac_os_x:10.7</cpe></osclass>
+</osmatch>
+<osmatch name="Apple Mac OS X 10.7.0 - 10.7.4 (Lion) (Darwin 11.0.0 - 11.4.0) or iPhone mobile phone (iOS 4.3.2)" accuracy="90" line="6573">
+<osclass type="general purpose" vendor="Apple" osfamily="Mac OS X" osgen="10.7.X" accuracy="90"><cpe>cpe:/o:apple:mac_os_x:10.7</cpe></osclass>
+<osclass type="phone" vendor="Apple" osfamily="iOS" osgen="4.X" accuracy="90"><cpe>cpe:/o:apple:iphone_os:4.3.2</cpe></osclass>
+</osmatch>
+<osmatch name="Apple Mac OS X 10.7.5 (Mountain Lion) (Darwin 11.4.2)" accuracy="90" line="6935">
+<osclass type="general purpose" vendor="Apple" osfamily="Mac OS X" osgen="10.7.X" accuracy="90"><cpe>cpe:/o:apple:mac_os_x:10.7.5</cpe></osclass>
+</osmatch>
+<osmatch name="Apple OS X 10.10 (Yosemite) - 10.12 (Sierra) (Darwin 14.0.0 - 16.1.0)" accuracy="90" line="7399">
+<osclass type="general purpose" vendor="Apple" osfamily="OS X" osgen="10.10.X" accuracy="90"><cpe>cpe:/o:apple:mac_os_x:10.10</cpe></osclass>
+<osclass type="general purpose" vendor="Apple" osfamily="OS X" osgen="10.11.X" accuracy="90"><cpe>cpe:/o:apple:mac_os_x:10.11</cpe></osclass>
+</osmatch>
+<osmatch name="Apple Mac OS X 10.4.8 - 10.4.11 (Tiger) (Darwin 8.8.0 - 8.11.0)" accuracy="90" line="5509">
+<osclass type="general purpose" vendor="Apple" osfamily="Mac OS X" osgen="10.4.X" accuracy="90"><cpe>cpe:/o:apple:mac_os_x:10.4</cpe></osclass>
+</osmatch>
+<osmatch name="Apple Mac OS X 10.4.8 - 10.4.9 (Tiger) (Darwin 8.8.0 - 8.9.0, PowerPC)" accuracy="90" line="5575">
+<osclass type="general purpose" vendor="Apple" osfamily="Mac OS X" osgen="10.4.X" accuracy="90"><cpe>cpe:/o:apple:mac_os_x:10.4</cpe></osclass>
+</osmatch>
+<osmatch name="Apple Mac OS X 10.5 (Leopard) (Darwin 9.0.0)" accuracy="90" line="5631">
+<osclass type="general purpose" vendor="Apple" osfamily="Mac OS X" osgen="10.5.X" accuracy="90"><cpe>cpe:/o:apple:mac_os_x:10.5</cpe></osclass>
+</osmatch>
+<osmatch name="Apple Mac OS X 10.6 (Snow Leopard) (Darwin 10.0.0)" accuracy="89" line="6139">
+<osclass type="general purpose" vendor="Apple" osfamily="Mac OS X" osgen="10.6.X" accuracy="89"><cpe>cpe:/o:apple:mac_os_x:10.6</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.93%E=4%D=10/13%OT=21%CT=%CU=32679%PV=N%DS=0%DC=L%G=N%TM=6348DE28%P=x86_64-apple-darwin21.5.0)&#xa;SEQ(SP=103%GCD=1%ISR=10B%TI=Z%CI=Z%II=RI%TS=21)&#xa;SEQ(SP=106%GCD=1%ISR=109%TI=Z%CI=RD%TS=21)&#xa;OPS(O1=M3FD8NW6NNT11SLL%O2=M3FD8NW6NNT11SLL%O3=M3FD8NW6NNT11%O4=M3FD8NW6NNT11SLL%O5=M3FD8NW6NNT11SLL%O6=M3FD8NNT11SLL)&#xa;WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FFFF)&#xa;ECN(R=Y%DF=Y%T=40%W=FFFF%O=M3FD8NW6SLL%CC=N%Q=)&#xa;T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T5(R=Y%DF=Y%T=40%W=FFFF%S=O%A=S+%F=AS%O=M3FD8NW6NNT11SLL%RD=0%Q=)&#xa;T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T7(R=Y%DF=N%T=40%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)&#xa;U1(R=Y%DF=N%T=40%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=Z%RUCK=0%RUD=G)&#xa;IE(R=Y%DFI=S%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="8" lastboot="Thu Oct 13 22:57:20 2022"/>
+<distance value="0"/>
+<tcpsequence index="262" difficulty="Good luck!" values="47B1E1AC,C2B32F81,D13C7BE1,AC0E0578,CB8E90EA,777B26B0"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="6A5DD22F,D76093B7,EEFACBCA,416FFC20,F99919F9,2CDA922C"/>
+<times srtt="131" rttvar="70" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1665719848"/>
+<taskend task="NSE" time="1665719848"/>
+<taskbegin task="NSE" time="1665719848"/>
+<taskend task="NSE" time="1665719848"/>
+<taskbegin task="NSE" time="1665719848"/>
+<taskend task="NSE" time="1665719848"/>
+<runstats><finished time="1665719848" timestr="Thu Oct 13 22:57:28 2022" summary="Nmap done at Thu Oct 13 22:57:28 2022; 1 IP address (1 host up) scanned in 102.27 seconds" elapsed="102.27" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
