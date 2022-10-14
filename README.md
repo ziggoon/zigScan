@@ -13,12 +13,12 @@ Nmap scans for penetration tests and offensive security competitions, like CPTC,
 5. ./zigScan/scanner/client
        - scan <target\>
 
-## Contributors
-[caret](https://github.com/641i130)
-
 ## Screenshots
 <img src="assets/cli.png">
 <img src="assets/web.png">
+
+## Contributors
+[caret](https://github.com/641i130)
 
 ## License
 Code is licensed unded GPL-3.0
