@@ -1,2 +1,0 @@
-# scanVisualizer
-nmap scan visualizer
