@@ -2,6 +2,7 @@ use crate::util;
 
 use rustyline::error::ReadlineError;
 use rustyline::Editor;
+use colored::Colorize;
 
 fn description() {
     let desc = r#"
@@ -28,7 +29,7 @@ fn main_help() {
 
 fn scan(ip: Vec<String>) {
     let ip = ip[1].as_str();
-    println!("[!] STARTING SCANS FOR: {:?}", ip);
+    println!("{}", "\n[-] STARTING SCANS NOW [-]\n".cyan().bold());
     util::lib::basic_tcp(&ip);
     util::lib::full_tcp(&ip);
     util::lib::intense_scan(&ip);

@@ -1,7 +1,6 @@
 extern crate ftp;
-extern crate colored;
 
-use colored::*;
+use colored::Colorize;
 use ftp::types::FileType;
 use ftp::FtpStream;
 use std::fs::File;
@@ -20,38 +19,60 @@ pub fn banner() {
  :: ::::   ::   ::: ::::  :::: ::    ::: :::  ::   :::   ::   ::  
 : :: : :  :     :: :: :   :: : :     :: :: :   :   : :  ::    :  
 "#;
-    print!("{}".red(), banner);
+    print!("{}", banner.red());
 }
 
 // using rustscan we can quickly run multiple network scans and push to the backend
 pub fn basic_tcp(target: &str) {
-    println!("[+] starting {{ PING }} rustscan...");
+    println!("{}", "[+] starting {{ PING }} rustscan...".yellow());
     let scan_child = Command::new("rustscan")
-        .args(["-a", target, "--", "-oX", "basic_tcp.xml"])
+        .args(["-a", target, "--", "-oX", "scans/basic_tcp.xml"])
         .stdout(Stdio::piped())
         .spawn()
         .expect("initial nmap scan failed");
 
     let _output = scan_child.wait_with_output().expect("scan is fucked");
-    post_ftp("basic_tcp.xml");
+    post_ftp("scans/basic_tcp.xml");
 }
 
 pub fn full_tcp(target: &str) {
-    println!("[+] starting {{ FULL TCP }} rustscan...");
+    println!("{}", "[+] starting {{ FULL TCP }} rustscan...".yellow());
     let scan_child = Command::new("rustscan")
-        .args(["-a", target, "-r", "1-65535", "--", "-sS", "-T4", "-oX", "full_tcp.xml"])
+        .args([
+            "-a",
+            target,
+            "-r",
+            "1-65535",
+            "--",
+            "-sS",
+            "-T4",
+            "-oX",
+            "scans/full_tcp.xml",
+        ])
         .stdout(Stdio::piped())
         .spawn()
         .expect("full tcp scan failed");
 
     let _output = scan_child.wait_with_output().expect("scan is fucked");
-    post_ftp("full_tcp.xml")
+    post_ftp("scans/full_tcp.xml")
 }
 
 pub fn intense_scan(target: &str) {
-    println!("[+] starting {{ INTENSE }} rustscan...");
+    println!("{}", "[+] starting {{ INTENSE }} rustscan...".yellow());
     let scan_child = Command::new("rustscan")
-        .args(["-a", target, "-r", "1-65535", "--", "-sS", "-sV", "-A", "-T4", "-oX", "intense.xml"])
+        .args([
+            "-a",
+            target,
+            "-r",
+            "1-65535",
+            "--",
+            "-sS",
+            "-sV",
+            "-A",
+            "-T4",
+            "-oX",
+            "scans/intense.xml",
+        ])
         .stdout(Stdio::piped())
         .spawn()
         .expect("intense scan failed");
@@ -61,15 +82,15 @@ pub fn intense_scan(target: &str) {
 }
 
 pub fn basic_udp(target: &str) {
-    println!("[+] starting {{ BASIC UDP }} rustscan...");
+    println!("{}", "[+] starting {{ BASIC UDP }} rustscan...".yellow());
     let scan_child = Command::new("rustscan")
-        .args(["-a", target, "--", "-sU", "-oX", "basic_udp.xml"])
+        .args(["-a", target, "--", "-sU", "-oX", "scans/basic_udp.xml"])
         .stdout(Stdio::piped())
         .spawn()
         .expect("basic udp scan failed");
 
     let _output = scan_child.wait_with_output().expect("scan is fucked");
-    post_ftp("basic_udp.xml")
+    post_ftp("scans/basic_udp.xml")
 }
 
 fn post_ftp(filename: &str) {
@@ -81,5 +102,5 @@ fn post_ftp(filename: &str) {
 
     let _ = ftp_stream.put(filename, &mut f1);
     let _ = ftp_stream.quit();
-    println!("\t [-] file uploaded")
+    println!("{}", "  [-] file uploaded".green())
 }
