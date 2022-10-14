@@ -16,5 +16,9 @@ Nmap scans for penetration tests and offensive security competitions, like CPTC,
 ## Contributors
 [caret](https://github.com/641i130)
 
+## Screenshots
+<img src="assets/cli.png">
+<img src="assets/web.png">
+
 ## License
 Code is licensed unded GPL-3.0
